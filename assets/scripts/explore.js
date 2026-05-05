@@ -15,6 +15,8 @@ const synth = window.speechSynthesis;
 function populateVoices() {
   const voices = synth.getVoices();
  
+  voiceSelect.innerHTML = '';
+  
   voices.forEach((voice, index) => {
     const option = document.createElement('option');
     option.value = index;
