@@ -44,7 +44,7 @@ talkButton.addEventListener('click', () => {
  
   // Swap to open-mouth while speaking
   utterance.addEventListener('start', () => {
-    faceImage.src = 'assets/images/talking.png';
+    faceImage.src = 'assets/images/smiling-open.png';
     faceImage.alt = 'Talking face';
   });
  
