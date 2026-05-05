@@ -17,7 +17,7 @@ function init() {
   hornSelect.addEventListener('change', () => {
   const horn = hornSelect.value;
 
-  hornImage.src = `assets/images/${horn}.png`;
+  hornImage.src = `assets/images/${horn}.svg`;
   hornImage.alt = horn.replace('-', ' ');
 
   audio.src = `assets/audio/${horn}.mp3`;
@@ -50,9 +50,5 @@ function init() {
     audio.play();
     if (hornSelect.value === 'party-horn') jsConfetti.addConfetti();
 
-    playButton.disabled = true;
-    audio.addEventListener('ended', () => {
-      playButton.disabled = false;
-    }, { once: true });
   });
 }
