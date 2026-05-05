@@ -15,7 +15,7 @@ const synth = window.speechSynthesis;
 function populateVoices() {
   const voices = synth.getVoices();
  
-  for (voice of voices) {
+  voices.forEach((voice, index) => {
     const option = document.createElement('option');
     option.value = index;
     option.textContent = `${voice.name} (${voice.lang})`;
@@ -25,7 +25,7 @@ function populateVoices() {
     option.setAttribute("data-lang", voice.lang);
     option.setAttribute("data-name", voice.name);
     voiceSelect.appendChild(option);
-  }
+  });
 }
  
 populateVoices();
