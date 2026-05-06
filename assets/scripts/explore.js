@@ -21,9 +21,6 @@ function populateVoices() {
     const option = document.createElement('option');
     option.value = index;
     option.textContent = `${voice.name} (${voice.lang})`;
-    if (voice.default) {
-      option.textContent += " — DEFAULT";
-    }
     option.setAttribute("data-lang", voice.lang);
     option.setAttribute("data-name", voice.name);
     voiceSelect.appendChild(option);

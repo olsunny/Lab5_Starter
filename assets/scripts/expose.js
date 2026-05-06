@@ -31,10 +31,10 @@ function init() {
     audio.volume = value / 100;
 
     let level;
-    if (value === 0)       level = 0;
+    if (value === 0)      level = 0;
     else if (value < 33)  level = 1;
     else if (value < 67)  level = 2;
-    else                   level = 3;
+    else                  level = 3;
 
     volumeIcon.src = `assets/icons/volume-level-${level}.svg`;
     volumeIcon.alt = `Volume level ${level}`;
